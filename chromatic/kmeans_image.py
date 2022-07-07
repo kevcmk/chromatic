@@ -99,7 +99,7 @@ def plot_colors(colors: typez.NDArray[["N", 3], np.uint8]) -> None:
 
 def save_colors_as_image(colors: typez.NDArray[["N", 3], np.uint8], path: str) -> None:
     colors_2d = colors.reshape((1, colors.shape[0], colors.shape[1]))
-    image = Image.fromarray(colors_2d).resize((colors.shape[0] * 64, colors.shape[1] * 64), resample=Image.NEAREST)
+    image = Image.fromarray(colors_2d).resize((colors.shape[0] * 72, colors.shape[1] * 72), resample=Image.NEAREST)
     image.save(path)
 
 
